@@ -40,7 +40,7 @@ class Agumon extends Digimon {
     public $treinador = 'Tai';
     public $imgTreinador = '';
 
-    public function chamaNenem() {
+    public function golpeEspecial() {
         echo('Chama Nenem: 50');
     }
 }
@@ -63,7 +63,7 @@ class Gabumon extends Digimon {
     public $treinador = 'Matt';
     public $imgTreinador = '';
 
-    public function fogoAzul() {
+    public function golpeEspecial() {
         echo('Fogo Azul: 60');
     }
 }
@@ -86,7 +86,7 @@ class Gomamon extends Digimon {
     public $treinador = 'Joe';
     public $imgTreinador = '';
 
-    public function ataqueBolhas() {
+    public function golpeEspecial() {
         echo('Ataque de Bolhas: 40');
     }
 }
@@ -109,7 +109,7 @@ class Palmon extends Digimon {
     public $treinador = 'Mimi';
     public $imgTreinador = '';
 
-    public function cheiroParalisante() {
+    public function golpeEspecial() {
         echo('Cheiro Paralisante: Paralisa por 1 turno');
     }
 }
@@ -132,7 +132,7 @@ class Patamon extends Digimon {
     public $treinador = 'T.K.';
     public $imgTreinador = '';
 
-    public function ondaCelestial() {
+    public function golpeEspecial() {
         echo('Onda Celestial: 70');
     }
 }
@@ -155,7 +155,7 @@ class Piyomon extends Digimon {
     public $treinador = 'Sora';
     public $imgTreinador = '';
 
-    public function espiralMagico() {
+    public function golpeEspecial() {
         echo('Espiral Mágico: 55');
     }
 }
@@ -178,7 +178,7 @@ class Tentomon extends Digimon {
     public $treinador = 'Izzy';
     public $imgTreinador = '';
 
-    public function choqueEletrico() {
+    public function golpeEspecial() {
         echo('Choque Elétrico: 65');
     }
 }

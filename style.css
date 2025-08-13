@@ -57,15 +57,22 @@ section{
      filter: hue-rotate(23px);
      border-radius: 2px;
 
+    
+
 }
 section > p{
     text-align: center;
     font-size: 30;
     color: white;
     font-weight: bold;
-     
-      
+   
+   
 }
+
+
+
+
+
 
 
 
