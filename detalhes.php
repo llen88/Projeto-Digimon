@@ -29,110 +29,81 @@ $digimon = new $selecao();
         
             background-color: rgb(0, 0, 0);
         }
-        .formulario{
-         display:flex;
-        
-            background-color: rgba(24, 28, 48, 0.788);
-            border-radius: 23px;
-            max-width: 800px;
-            max-height: 1000px;
-            margin:auto;
-            padding: 10px;
-            justify-content: center; /* centraliza na horizontal */
-            align-items: center;     /* centraliza na vertical */
-            
-        }
-        .visual{
-        
-        }
-        img{
-            width: 300px;
-            height: 300px;
-            margin:30px;
-    
-        }
-        #nome{
-            text-align: center;  
-            color: var(--cor0);
-        }
-        p{
-        color: var(--cor0);
-        }
-        h2{
-            color: var(--cor0);
-        }
-        .status{
-         size:20;
-        }
-        .imgevolutiva{
-        width: 50px;
-        height:50px;
-        }
+    .formulario {
+    display: flex;
+    background-color: rgba(24, 28, 48, 0.788);
+    border-radius: 23px;
+    max-width: 800px;
+    padding: 20px;
+    gap: 20px; /* espaço entre imagem e detalhes */
+}
 
-        .row{
-            display:flex;
-            flex-direction: row;
-            width: 100%;
-            height:55px;
-        }
-   
-        
-    </style>
-      
-    </head>
+.visual {
+    text-align: center;
+}
 
-    <body>
-    <div class="formulario">
-  
+.visual img {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
+}
+
+#nome {
+    color: var(--cor0);
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--cor0);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.imgevolutiva {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.status {
+    margin: 3px 0;
+}
+
+h2 {
+    margin: 10px 0 5px;
+}
+</style>
+
+<div class="formulario">
 
     <section class="visual">
-    <h1 id="nome"><?php echo $digimon->__get('nome');?> </h1>
-    
-    <img src="<?php echo  $digimon->__get('img');?>" alt="">
+        <h1 id="nome"><?php echo $digimon->__get('nome'); ?></h1>
+        <img src="<?php echo $digimon->__get('img'); ?>" alt="">
     </section>
 
+    <section class="detalhes">
+        <div class="row">
+            <img class="imgevolutiva" src="" alt="">
+            <img class="imgevolutiva" src="" alt="">
+        </div>
 
-    <section class='detalhes'>
+        <h2>Descrição:</h2>
+        <p><?php echo $digimon->__get('descricao'); ?></p>
 
-    <div class='row'>
-        <section>
-            <img  class='imgevolutiva' src="" alt="">
-            <p>sei la</p>
-        </section>
+        <p class="status">Força: <strong><?php echo $digimon->__get('forca'); ?></strong></p>
+        <p class="status">Defesa: <strong><?php echo $digimon->__get('defesa'); ?></strong></p>
+        <p class="status">Esquiva: <strong><?php echo $digimon->__get('esquiva'); ?></strong></p>
+        <p class="status">Velocidade: <strong><?php echo $digimon->__get('velocidade'); ?></strong></p>
 
-        <section>
-            <img  class='imgevolutiva' src="" alt="">
-        </section>
-s
-    </div>
-
-
-    <div>
-    <h2 >Descrição:</h2>
-    <p id="nome">Descrição<?php echo "<strong>{$digimon->__get('descricao')}</strong>"?></p>
-    <br>
-    
-    <p  class='status'>Força:  <?php echo "<strong>{$digimon->__get('forca')}</strong>"?></p>
-    <p  class='status'>Defesa <?php echo "<strong>{$digimon->__get('defesa')}</strong>"?></p>
-    <p  class='status'>Esquiva <?php echo "<strong>{$digimon->__get('esquiva')}</strong>"?></p>
-    <p  class='status'>$velocidade <?php echo "<strong>{$digimon->__get('velocidade')}</strong>"?></p>
-
-    <h2>
-        Golpe especial:
-    
-
-    </h2>
-    <p class='status'> <?php echo $digimon->golpeEspecial();?></p>
-
-    </div>
+        <h2>Golpe especial:</h2>
+        <p class="status"><?php echo $digimon->golpeEspecial(); ?></p>
     </section>
 
-
-    </div>
-    </body>
-</html>
-<!-- $forca = 95;
-    public $defesa = 65;
-    public $esquiva = 70;
-    public $velocidade = 90;
-    public $descricao = 'Um pequeno dinossauro corajoso que cospe fogo.'; -->
+</div>
